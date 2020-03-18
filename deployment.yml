@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: app-pstember
+  namespace: training-row-pstember
+  labels:
+    app: training-row-pstember
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app-pstember
+    spec:
+      containers:
+      - image: gcr.io/snyk-technical-services/training-row:pstember
+        name: app-pstember
+        ports:
+        - containerPort: 3000
+          protocol: 'TCP'
+      restartPolicy: Always

@@ -1,0 +1,10 @@
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "name": "training-row-pstember",
+    "labels": {
+      "name": "training-row-pstember"
+    }
+  }
+}
